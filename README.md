@@ -6,3 +6,6 @@ Required packages:
 1) joy
 2) ros navigation stack (for fake localization)
 3) rviz
+
+Set neccessary paths. launch by typing
+roslaunch track01 track01.launch
