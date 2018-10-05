@@ -1,0 +1,2 @@
+prius_description:track01
+-DCATKIN_DEVEL_PREFIX=/home/sherman/simulation_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sherman/simulation_ws/install -G Unix Makefiles

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+
+   <!-- launch an empty Gazebo world -->
+   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="verbose" value="true"/>
+    <arg name="world_name" value="$(find track01)/worlds/track01.world"/>
+  </include>
+  <!-- sSpawn robot into world -->
+  <arg name="model" default="$(find prius_description)/urdf/prius.urdf"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find prius_description)/urdf/prius.urdf -urdf -x 26 -y 20 -z 0.6 -Y 1.5 -model prius"/>
+  <arg name="rvizconfig" default="$(find track01)/rviz/demo.rviz" />
+
+  <!-- <param name="robot_description" textfile="$(arg model)"/> -->
+  <param name="robot_description" textfile="$(find prius_description)/urdf/prius.urdf"/>
+
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" >
+<!--     <remap from="robot_description" to="different_robot_description" />
+    <remap from="joint_states" to="/prius/joint_states" /> -->
+  </node>
+  <node pkg="fake_localization" type="fake_localization" name="fake_localization"> 
+    <!-- <remap from="base_pose_ground_truth" to="/prius/base_pose_ground_truth"/> -->
+  </node>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="very_inaccurate_odom" args="0 0 0 0 0 0 odom base_link"/>
+  <node pkg="track01" type="joystick_translator" name="joystick_translator"/> 
+
+  <!-- Run two joy nodes publishing to the same topic, just to cover two possible joystick locations -->
+  <node pkg="joy" type="joy_node" name="joy_node0">
+    <param name="dev" value="/dev/input/js0"/>
+  </node>
+  <node pkg="joy" type="joy_node" name="joy_node1">
+    <param name="dev" value="/dev/input/js1"/>
+  </node>
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>
+

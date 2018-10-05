@@ -1,0 +1,8 @@
+prefix=/home/sherman/simulation_ws/devel
+
+Name: track01
+Description: Description of track01
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/sherman/simulation_ws/devel/lib 
+Requires: roscpp gazebo_ros
