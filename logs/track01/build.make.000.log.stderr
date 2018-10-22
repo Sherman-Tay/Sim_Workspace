@@ -1,0 +1,12 @@
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.cc:20[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.cc:27:0[m[K:
+[01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.hh:29:32:[m[K [01;31m[Kfatal error: [m[Kprius_msgs/Control.h: No such file or directory
+compilation terminated.
+make[2]: *** [CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/PriusHybridPlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

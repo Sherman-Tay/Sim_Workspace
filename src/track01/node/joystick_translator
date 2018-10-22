@@ -21,7 +21,7 @@ from sensor_msgs.msg import Joy
 
 
 STEERING_AXIS = 0
-THROTTLE_AXIS = 4
+THROTTLE_AXIS = 8
 
 
 class Translator:
@@ -47,9 +47,9 @@ class Translator:
             command.brake = message.axes[THROTTLE_AXIS] * -1
             command.throttle = 0.0
 
-        if message.buttons[3]:
+        if message.buttons[0]:
             command.shift_gears = Control.FORWARD
-        elif message.buttons[1]:
+        elif message.buttons[0]:
             command.shift_gears = Control.NEUTRAL
         elif message.buttons[0]:
             command.shift_gears = Control.REVERSE

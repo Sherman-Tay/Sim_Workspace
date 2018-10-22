@@ -14,7 +14,7 @@
         <pose>0 0 0  0 0 0</pose>
         <visual name="track_course_visual">
           <geometry>
-            <mesh><uri>file://track01.dae</uri></mesh>
+            <mesh><uri>file:///home/zachary/Sim_Workspace/src/track01/worlds/track01.dae</uri></mesh>
           </geometry>
         </visual>
         <collision name = "collision">

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "prius_description"
-PROJECT_SPACE_DIR = "/home/sherman/simulation_ws/devel"
+PROJECT_SPACE_DIR = "/home/zachary/Sim_Workspace/devel/.private/prius_description"
 PROJECT_VERSION = "0.0.1"

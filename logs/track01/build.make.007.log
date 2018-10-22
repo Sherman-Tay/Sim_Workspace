@@ -1,0 +1,7 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/track01.dir/src/world_plugin.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libtrack01.so[0m
+[ 50%] Built target track01
+[35m[1mScanning dependencies of target PriusHybridPlugin[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o[0m
+[100%] [32m[1mLinking CXX shared library libPriusHybridPlugin.so[0m
+[100%] Built target PriusHybridPlugin

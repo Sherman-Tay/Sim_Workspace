@@ -1,8 +1,8 @@
-prefix=/home/sherman/simulation_ws/install
+prefix=/home/zachary/Sim_Workspace/install
 
 Name: prius_description
 Description: Description of prius_description
 Version: 0.0.1
 Cflags: 
-Libs: -L/home/sherman/simulation_ws/install/lib 
+Libs: -L/home/zachary/Sim_Workspace/install/lib 
 Requires: 

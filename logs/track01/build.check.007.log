@@ -1,0 +1,33 @@
+CMake Error: Error in cmake code at
+/home/zachary/Sim_Workspace/src/track01/CMakeLists.txt:28:
+Parse error.  Function missing ending ")".  Instead found unterminated string with text "-std=c++11 ${{CMAKE_CXX_FLAGS}}')
+
+# Load catkin and all dependencies required for this package
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  gazebo_ros
+  prius_msgs
+)
+
+# Depend on system install of Gazebo
+find_package(gazebo REQUIRED)
+
+link_directories(${{GAZEBO_LIBRARY_DIRS}})
+include_directories(${{Boost_INCLUDE_DIR}} ${{catkin_INCLUDE_DIRS}} ${{GAZEBO_INCLUDE_DIRS}})
+
+add_library(${{PROJECT_NAME}} src/world_plugin.cpp)
+add_library(PriusHybridPlugin plugins/PriusHybridPlugin.cc)
+target_link_libraries(${{PROJECT_NAME}} ${{catkin_LIBRARIES}} ${{GAZEBO_LIBRARIES}})
+
+catkin_package(
+  DEPENDS
+    roscpp
+    gazebo_ros
+    prius_msgs
+)
+".
+[36m--[0m Configuring incomplete, errors occurred!
+See also "/home/zachary/Sim_Workspace/build/track01/CMakeFiles/CMakeOutput.log".
+See also "/home/zachary/Sim_Workspace/build/track01/CMakeFiles/CMakeError.log".
+Makefile:1414: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1

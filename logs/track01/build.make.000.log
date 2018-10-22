@@ -1,0 +1,21 @@
+[35m[1mScanning dependencies of target PriusHybridPlugin[0m
+[35m[1mScanning dependencies of target track01[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/track01.dir/src/world_plugin.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o[0m
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.cc:20[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.cc:27:0[m[K:
+[01m[K/home/zachary/Sim_Workspace/src/track01/plugins/PriusHybridPlugin.hh:29:32:[m[K [01;31m[Kfatal error: [m[Kprius_msgs/Control.h: No such file or directory
+compilation terminated.
+CMakeFiles/PriusHybridPlugin.dir/build.make:62: recipe for target 'CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o' failed
+make[2]: *** [CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o] Error 1
+CMakeFiles/Makefile2:360: recipe for target 'CMakeFiles/PriusHybridPlugin.dir/all' failed
+make[1]: *** [CMakeFiles/PriusHybridPlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 75%] [32m[1mLinking CXX shared library libtrack01.so[0m
+[ 75%] Built target track01
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
